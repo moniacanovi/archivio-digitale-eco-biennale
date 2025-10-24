@@ -1,0 +1,17 @@
+:root {
+    --lion: #B38A58;
+    --olive: #6F732F;
+    --hunter-green: #3C5233;
+    --cal-poly-green: #264027;
+    --rich-black: #0D1F22;
+}
+main{
+    height: 100vh;
+}
+
+footer {
+    background-color: var(--hunter-green);
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+}
