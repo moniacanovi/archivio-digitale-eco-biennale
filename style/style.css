@@ -4,14 +4,20 @@
     --hunter-green: #3C5233;
     --cal-poly-green: #264027;
     --rich-black: #0D1F22;
+    --white: #ffffff;
 }
 main{
     height: 100vh;
 }
 
+nav {
+    background-color: var(--hunter-green);
+    color: var(--white);
+}
+
 footer {
     background-color: var(--hunter-green);
-    color: white;
+    color: var(--white);
     padding: 40px 0;
     margin-top: 60px;
 }
