@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivio - Biennale Eco Archive</title>
+
+    <!-- START Dublin Core Metadata -->
+    <!-- END Dublin Core Metadata -->
+
+    <link href="./style/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- Enhanced Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-enhanced" data-bs-theme="dark">
+            <div class="container">
+                <!-- Brand Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <div class="brand-container">
+                        <div class="logo-icon">
+                            <span>🌿</span>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-title">Biennale Eco Archive</span>
+                            <span class="brand-subtitle">Università di Ricerca</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                                <i class="fas fa-home me-1"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="archivio.html" role="button">
+                                <i class="fas fa-archive me-1"></i>Archivio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-stream me-1"></i>Timeline
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-users me-1"></i>Artisti
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Search and Actions -->
+                    <div class="navbar-actions">
+                        <form class="d-flex search-form" role="search">
+                            <div class="input-group">
+                                <input class="form-control search-input" type="search"
+                                    placeholder="Cerca opere, artisti..." aria-label="Search">
+                                <button class="btn search-btn" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="nav-divider"></div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-user-graduate me-1"></i>Area Riservata
+                            </a>
+                            <a href="#" class="btn btn-light btn-sm">
+                                <i class="fas fa-download me-1"></i>Dataset
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-4">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <aside class="col-md-3">
+                <div class="card" style="background-color: rgb(124, 166, 125);">
+                    <div class="card-header">
+                        <h5>Filtri</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Artist Filter -->
+                        <div class="mb-3">
+                            <label class="form-label">Artista</label>
+                            <select class="form-select">
+                                <option selected>Tutti gli artisti</option>
+                                <option>Charles Atlas</option>
+                                <option>Giuseppe Penone</option>
+                                <option>Joan Jonas</option>
+                                <option>Justin Brice Guariglia</option>
+                                <option>LIsa Rejhina</option>
+                                <option>Maya Lin</option>
+                                <option>Michel Blzy</option>
+                                <option>Mohri Yuko</option>
+                                <option>Olafur Eliasson</option>
+                                <option>Olavi Lanu</option>
+                                <option>Rugile Barzdziukaite</option>
+                                <option>Sverre Fehn</option>
+                                <option>Teresa Solar</option>
+                                <option>Tomas Saraceno</option>
+                                <option>Tol Hol-Hol Tol</option>
+                                <option>Tue Greenfort</option>
+                                <option>Uffe Isolotto</option>
+                                <option>Vincent Huang</option>
+                                <option>Pakui Hardware</option>
+                            </select>
+                        </div>
+
+                        <!-- Year Filter -->
+                        <div class="mb-3">
+                            <label class="form-label">Anno</label>
+                            <select class="form-select">
+                                <option selected>Tutti gli anni</option>
+                                <option>1962</option>
+                                <option>1978</option>
+                                <option>2003</option>
+                                <option>2007</option>
+                                <option>2013</option>
+                                <option>2015</option>
+                                <option>2017</option>
+                                <option>2019</option>
+                                <option>2022</option>
+                                <option>2024</option>
+                            </select>
+                        </div>
+
+                        <!-- Technique Filter -->
+                        <div class="mb-3">
+                            <label class="form-label">Tecnica</label>
+                            <select class="form-select">
+                                <option selected>Tutte le tecniche</option>
+                                <option>Scultura</option>
+                                <option>Architettura</option>
+                                <option>Installazione</option>
+                                <option>Laboratorio</option>
+
+                            </select>
+                        </div>
+
+                        <button class="btn btn-outline-secondary w-100">Applica Filtri</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Items Grid -->
+            <section class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>Archivio completo</h1>
+                    <select class="form-select w-auto">
+                        <option selected>Ordina per</option>
+                        <option>Data</option>
+                        <option>Artista</option>
+                        <option>Titolo</option>
+                    </select>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Item Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100"
+                            onclick="location.href='./elementi/padiglione-nordico.html?artist=Sverre Fehn&work=Padiglione nordico&year=1962'">
+                            <img src="./img/Edizioni/31/31edizione_padiglione_nordico.jpg" class="card-img-top"
+                                alt="Opera 1" style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Padiglione nordico</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Sverre Fehn</p>
+                                    <p class="card-text"><strong>Data:</strong> 1962</p>
+                                    <p class="card-text" style="color: rgb(243, 238, 238);">Gli alberi vengono conservati durante
+                                        la costruzione
+                                        del padiglione e ne attraversano il tetto, alla ricerca di luce.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/38/38edizione_olavi_Lanu (2).jpg" class="card-img-top"
+                                alt="Opera 6" style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Vita nei boschi in Finlandia</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Olavi Lanu</p>
+                                    <p class="card-text"><strong>Data:</strong> 1978</p>
+                                    <p class="card-text" style="color: rgb(243, 235, 235);">Un corpo gigantesco giace sul cemento
+                                        tra vita e morte,
+                                        simbolo dell’unione inevitabile con la terra, dove la materia e la natura si
+                                        fondono
+                                        in un sonno eterno.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/50/Olafur_eliasson_pavillon.jpg" class="card-img-top" alt="Opera 6"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">The blind Pavillon</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Olafur Eliasson</p>
+                                    <p class="card-text"><strong>Data:</strong> 2003</p>
+                                    <p class="card-text" style="color: rgb(245, 238, 238);">Un padiglione trasforma i visitatori
+                                        in parte
+                                        dell’esperienza, esplorando corpo, luce e ambiente e stimolando una
+                                        riflessione sulla coscienza ecologica.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/52/Penone_albero_di_cuoio.jpg" class="card-img-top" alt="Opera 6"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Albero di cuoio</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Giuseppe Penone</p>
+                                    <p class="card-text"><strong>Data:</strong> 2007</p>
+                                    <p class="card-text" style="color: rgb(247, 234, 234);">Una colonna in larice rivestita di
+                                        cuoio trasforma
+                                        l’albero in “scultura vivente”, esplorando la natura, la materia e la corteccia
+                                        come
+                                        forma artistica.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/52/Penone_sculture_di_linfa.jpg" class="card-img-top" alt="Opera 6"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Scultura di linfa</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Giuseppe Penone</p>
+                                    <p class="card-text"><strong>Data:</strong> 2007</p>
+                                    <p class="card-text" style="color: rgb(247, 239, 239);">Installazione ambientale che trasforma
+                                        la sala con pareti in cuoio a “corteccia”, pavimento in marmo con impronta del
+                                        cervello e sculture di legno con resina vegetale, evocando la linfa vitale degli
+                                        alberi. Un’esperienza multisensoriale tra vista, tatto e olfatto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/55/Vincent_huang.jpg" class="card-img-top" alt="Opera 6"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Destiny Intertwined</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Vincent J.F. Huang</p>
+                                    <p class="card-text"><strong>Data:</strong> 2013</p>
+                                    <p class="card-text" style="color: rgb(246, 238, 238);">L’artista usa Tuvalu come metafora del
+                                        cambiamento
+                                        climatico, mostrando il conflitto tra natura e civiltà con installazioni di
+                                        humor
+                                        nero su distruzione e sopravvivenza.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 7 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/56/Joan_jonas.jpg" class="card-img-top" alt="Opera 6"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">They Come to Us Without a Word</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Joan Jonas</p>
+                                    <p class="card-text"><strong>Data:</strong> 2015</p>
+                                    <p class="card-text" style="color: rgb(249, 235, 235);">L’artista impiega materiali naturali e
+                                        installazioni
+                                        ambientali per mostrare la fragilità della natura e il suo mutamento sotto
+                                        l’impatto
+                                        umano, invitando a riflettere sull’ambiente e sul paesaggio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 8 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100"
+                            onclick="location.href='./elementi/padiglione-della-terra.html?artist=Charles Atlas&work=Tyranny of Consciousness&year=2017'">
+                            <img src="./img/Edizioni/57/Charles_Atlas_grande.jpg" class="card-img-top" alt="Opera 2"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">The Tyranny of Consciousness</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Charles Atlas</p>
+                                    <p class="card-text"><strong>Data:</strong> 2017</p>
+                                    <p class="card-text" style="color: rgb(250, 241, 241);">Installazione di videoarte con
+                                        countdown fino alla
+                                        fine
+                                        del mondo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 9 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/57/Michel_blazy.jpg" class="card-img-top" alt="Opera 3"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Collection de Chaussures</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Michel Blazy</p>
+                                    <p class="card-text"><strong>Data:</strong> 2017</p>
+                                    <p class="card-text" style="color: rgb(253, 236, 236);">Blazy crea una “parete verde” di
+                                        scarpe e piante che
+                                        crescono e si degradano durante la Biennale, riflettendo sul rapporto tra
+                                        consumo,
+                                        natura e trasformazione ambientale.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Item Card 10 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/57/Padiglione_new_zeland.jpg" class="card-img-top" alt="Opera 6"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">In Pursuit of Venus</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Lisa Reihana</p>
+                                    <p class="card-text"><strong>Data:</strong> 2017</p>
+                                    <p class="card-text" style="color: rgb(248, 234, 234);">L’opera rielabora l’estetica dei
+                                        dipinti coloniali del Capitano Cook, trasformandola in un contesto contemporaneo
+                                        dove natura, viaggio e colonizzazione dialogano con le attuali questioni
+                                        ecologiche.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 11 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/57/Olafur_Eliasson_grande.png" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Green light</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Olafur Eliasson</p>
+                                    <p class="card-text"><strong>Data:</strong> 2017</p>
+                                    <p class="card-text" style="color: rgb(247, 238, 238);">Laboratorio partecipativo dove
+                                        rifugiati e visitatori creavano lampade verdi per sostenere l’inclusione. Fu
+                                        simbolo della Biennale 2017 per il suo legame tra ecologia e solidarietà.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Item Card 12 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/58/Saraceno_clouds.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">On disappearence of Clouds</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Tomas Saraceno</p>
+                                    <p class="card-text"><strong>Data:</strong> 2019</p>
+                                    <p class="card-text" style="color: rgb(252, 242, 242);">L’installazione presenta 36 “nuvole”
+                                        sospese sull’acqua dell’Arsenale, che oscillano con maree e vento, evocando un
+                                        paesaggio in dialogo tra elementi naturali e la scomparsa delle nuvole come
+                                        metafora della crisi climatica.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 13 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100"
+                        onclick="location.href='./elementi/padiglione-lituania-performance.html?artist=Rugile Barzdziukaite&work=Sun%26Sea&year=2019'">
+                            <img src="./img/Edizioni/58/Padiglione_Lituania_grande.webp" class="card-img-top"
+                                alt="Opera 4" style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Sun&Sea</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Rugile Barzdziukaite e altre</p>
+                                    <p class="card-text"><strong>Data:</strong> 2019</p>
+                                    <p class="card-text" style="color: rgb(250, 239, 239);">Performance che ricrea una spiaggia
+                                        con
+                                        figuranti intenti a cantare arie da operetta su temi quotidiani e climatici,
+                                        trasformando la scena in metafora della Terra affaticata dal cambiamento
+                                        climatico.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 14 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/58/Maya_Lin.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Water Water Everywhere, Not a Drop to Drink</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Maya Lin</p>
+                                    <p class="card-text"><strong>Data:</strong> 2019</p>
+                                    <p class="card-text" style="color: rgb(252, 241, 241);">Installazione site-specific che
+                                        affronta il tema dell’acqua e della crisi idrica: gocce di vetro evocano
+                                        fragilità ed evaporazione, collegando poeticamente il Mediterraneo alle sue
+                                        emergenze ambientali.
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 15 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/58/Brice.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Artist Need to Create on the Same Scale that Society has the
+                                        Capacity to Destry</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Justin Brice Guariglia</p>
+                                    <p class="card-text"><strong>Data:</strong> 2019</p>
+                                    <p class="card-text" style="color: rgb(248, 238, 238);"> l'Opera è al confine tra arte,
+                                        scienza ed ecologia; evidenzia fragilità della natura, trasformazione
+                                        degli ecosistemi e responsabilità umana nella crisi climatica.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 16 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/59/Padiglione_cile.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Heart of the Peat-bogs</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Tol Hol-Hol Tol</p>
+                                    <p class="card-text"><strong>Data:</strong> 2022</p>
+                                    <p class="card-text" style="color: rgb(249, 239, 239);">Percorso sperimentale dedicato alla
+                                        conservazione delle torbiere, ecosistema chiave per il clima, il cui nome
+                                        Selk’nam “Hol-Hol Tol” significa “cuore delle torbiere”.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 17 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/59/Medusa.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Medusa Alga Laguna</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Tue Greenfort</p>
+                                    <p class="card-text"><strong>Data:</strong> 2022</p>
+                                    <p class="card-text" style="color: rgb(248, 235, 235);">L'installazione esplora l’ecosistema
+                                        della laguna di Venezia, mostrando la vita invisibile di alghe e meduse e
+                                        riflettendo sull’impatto umano, la crisi ecologica e la perdita di biodiversità.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 18 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/59/Teresa_Solar.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Tunnel Boring Machine</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Teresa Solar</p>
+                                    <p class="card-text"><strong>Data:</strong> 2022</p>
+                                    <p class="card-text" style="color: rgb(248, 236, 236);">L’opera esplora il rapporto tra natura
+                                        e infrastruttura, usando la “macchina per scavo” per riflettere sull’impatto
+                                        umano sul sottosuolo e sulle trasformazioni ambientali della terra.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 19 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/59/Uffe_isolotto.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">We Walkef the Earth</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Uffe Isolotto</p>
+                                    <p class="card-text"><strong>Data:</strong> 2022</p>
+                                    <p class="card-text" style="color: rgb(249, 236, 236);">L’opera trasforma il padiglione in un
+                                        paesaggio instabile tra agricoltura, storie rurali e crisi ambientali, invitando
+                                        a riflettere sul rapporto umano con la terra e la transizione ecologica.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 20 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/60/Padiglione_Lituania_2024_grande.jpg" class="card-img-top"
+                                alt="Opera 4" style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Inflammation</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Pakui Hardware e MarijaRozanskaite
+                                    </p>
+                                    <p class="card-text"><strong>Data:</strong> 2024</p>
+                                    <p class="card-text" style="color: rgb(253, 241, 241);">Il progetto unisce le pitture di
+                                        Rožanskaitė su l’installazione di Pakui Hardware, creando sculture e ambienti
+                                        che esplorano corpi e organismi-techno in crisi, riflettendo
+                                        sull’interconnessione tra corpo e ambiente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item Card 21 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100">
+                            <img src="./img/Edizioni/60/Yuko_mohri.jpg" class="card-img-top" alt="Opera 4"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="gradient-card">
+                                <div class="card-body gradient-card-content">
+                                    <h5 class="card-title">Compose e «Decomposition»</h5>
+                                    <p class="card-text"><strong>Artista:</strong> Yuko Mohri</p>
+                                    <p class="card-text"><strong>Data:</strong> 2024</p>
+                                    <p class="card-text" style="color: rgb(249, 240, 240);">Mohri trasforma oggetti quotidiani in
+                                        opere che reagiscono a umidità, perdite d’acqua e decadimento, evidenziando le
+                                        relazioni tra ambiente, materia e tempo, con particolare attenzione alle
+                                        inondazioni veneziane.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-enhanced">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <div class="brand-logo mb-3">
+                            <div class="logo-icon">
+                                <span>🌿</span>
+                            </div>
+                            <h4 class="brand-title">Biennale Eco Archive</h4>
+                        </div>
+                        <p class="footer-description">
+                            Archivio digitale innovativo dedicato alla documentazione e preservazione
+                            delle opere d'arte ecologiche presenti alla Biennale di Venezia.
+                            Un ponte tra tradizione artistica e innovazione sostenibile.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <h5 class="footer-heading">Esplora</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Archivio Storico</a></li>
+                        <li><a href="#" class="footer-link">Timeline</a></li>
+                        <li><a href="#" class="footer-link">Artisti</a></li>
+                        <li><a href="#" class="footer-link">Mostre Virtuali</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <h5 class="footer-heading">Risorse</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://www.labiennale.org" target="_blank" class="footer-link">La Biennale di
+                                Venezia</a></li>
+                        <li><a href="https://www.wikidata.org" target="_blank" class="footer-link">Wikidata</a></li>
+                        <li><a href="https://viaf.org" target="_blank" class="footer-link">VIAF</a></li>
+                        <li><a href="#" class="footer-link">Bibliografia</a></li>
+                        <li><a href="#" class="footer-link">Open Data</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Contatti</h5>
+                    <div class="contact-info">
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span>monia.canovi@studio.unibo.it</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span>Bologna, Italia</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-university me-2"></i>
+                            <span>Università di Bologna</span>
+                        </div>
+                    </div>
+
+                    <div class="newsletter mt-4">
+                        <h6 class="newsletter-title">Rimani Aggiornato</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control newsletter-input" placeholder="La tua email">
+                            <button class="btn newsletter-btn" type="button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            &copy; 2025 Biennale Eco Archive. Progetto di ricerca educativo.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-bottom-links">
+                            <a href="#" class="bottom-link">Privacy Policy</a>
+                            <a href="#" class="bottom-link">Terms of Use</a>
+                            <a href="#" class="bottom-link">Credits</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.gradient-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+
+</html>
